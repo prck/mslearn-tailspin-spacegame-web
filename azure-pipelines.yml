@@ -7,7 +7,6 @@ pool:
     - npm
 
 variables:
-  buildConfiguration: "Release"
   wwwrootDir: "Tailspin.SpaceGame.Web/wwwroot"
   dotnetSdkVersion: "5.x"
 
@@ -38,9 +37,9 @@ steps:
       command: "restore"
       projects: "**/*.csproj"
 
-  - template: templates/build.yml
-    parameters:
-      buildConfiguration: "Debug"
+  # - template: templates/build.yml
+  #   parameters:
+  #     buildConfiguration: "Debug"
 
   - template: templates/build.yml
     parameters:
